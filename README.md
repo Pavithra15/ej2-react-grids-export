@@ -1,6 +1,6 @@
-# ej2-react-grids-filtering
+# ej2-react-grids-export
 
-React Filtering sample with menu filtering type.
+React Filtering sample with excell export.
 
 ## Installing
 
