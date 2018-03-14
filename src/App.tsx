@@ -25,8 +25,10 @@ export default class App extends React.Component<{}, {}> {
             default: break;
         }
     }
-    public componentDidMount() {
-        ReactDOM.render( <GridComponent dataSource={data} ref={grid => this.grid = grid} columns={this.columns} toolbar={this.toolbarOptions} allowResizing={true}
+   
+    render() {
+        return (
+          <GridComponent dataSource={data} ref={grid => this.grid = grid} columns={this.columns} toolbar={this.toolbarOptions} allowResizing={true}
             allowGrouping={true}
             allowSorting={true}
             allowMultiSorting={true}
@@ -34,11 +36,7 @@ export default class App extends React.Component<{}, {}> {
             showColumnChooser={true}
             allowExcelExport={true} toolbarClick={this.toolbarClick.bind(this)}>
             <Inject services={[Sort, Group, Search, Toolbar, Resize, ExcelExport, ColumnChooser, Reorder]} />
-        </GridComponent>,document.getElementById('mygrid'));
-    }
-    render() {
-        return (
-           <div id='mygrid'></div>
+        </GridComponent>
 
         );
     }
